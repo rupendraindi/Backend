@@ -57,4 +57,7 @@ app.use("/dashboard", dashboardRouter);
 import googleAuthRouter from "./src/Routes/passportRouter.js";
 app.use("/users", googleAuthRouter);
 
+import blogRouter from "./src/Routes/blogRoute.js";
+app.use("/blog", blogRouter);
+
 export { app };
