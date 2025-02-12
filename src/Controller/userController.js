@@ -1,6 +1,6 @@
 import nodemailer from "nodemailer";
 import User from "../Model/userModel.js";
-import asynchandler from "../utils/asyncHandler.js";
+import asynchandler from "../Utils/asyncHandler.js";
 import { ApiError } from "../Utils/apiError.js";
 import { ApiResponse } from "../Utils/apiResponse.js";
 import bcrypt from "bcrypt";

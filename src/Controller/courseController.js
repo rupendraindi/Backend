@@ -2,7 +2,7 @@ import Course from "../Model/courseModel.js";
 import { ApiError } from "../Utils/apiError.js";
 import { ApiResponse } from "../Utils/apiResponse.js";
 import uploadOnCloudinary from "../Utils/cloudinary.js";
-import asynchandler from "../utils/asynchandler.js";
+import asynchandler from "../Utils/asyncHandler.js";
 import Category from "../Model/categoryModel.js";
 import multer from "multer";
 

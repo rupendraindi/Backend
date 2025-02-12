@@ -1,6 +1,6 @@
 import { ApiError } from "../Utils/apiError.js";
 import { ApiResponse } from "../Utils/apiResponse.js";
-import asynchandler from "../utils/asynchandler.js";
+import asynchandler from "../Utils/asyncHandler.js";
 import Course from "../Model/courseCartModel.js";
 import User from "../Model/userModel.js"; 
 

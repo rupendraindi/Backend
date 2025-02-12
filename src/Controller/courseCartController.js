@@ -2,7 +2,7 @@ import Cart from "../Model/courseCartModel.js";
 import Course from "../Model/courseModel.js";
 import { ApiError } from "../Utils/apiError.js";
 import { ApiResponse } from "../Utils/apiResponse.js";
-import asynchandler from "../utils/asynchandler.js";
+import asynchandler from "../Utils/asyncHandler.js";
 
 // Add a course to the cart
 export const addToCart = async (req, res) => {

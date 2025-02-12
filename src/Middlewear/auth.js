@@ -2,7 +2,7 @@ import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
 import { ApiError } from "../Utils/apiError.js";
 import { ApiResponse } from "../Utils/apiResponse.js";
-import asynchandler from "../utils/asynchandler.js";
+import asynchandler from "../Utils/asyncHandler.js";
 
 dotenv.config();
 

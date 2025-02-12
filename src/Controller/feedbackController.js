@@ -2,7 +2,7 @@ import Feedback from "../Model/feedbackModel.js";
 import Course from "../Model/courseModel.js"; // Import Course model to validate course
 import { ApiError } from "../Utils/apiError.js";
 import { ApiResponse } from "../Utils/apiResponse.js";
-import asynchandler from "../utils/asynchandler.js";
+import asynchandler from "../Utils/asyncHandler.js";
 import User from "../Model/userModel.js";
 import mongoose from "mongoose";
 

@@ -1,7 +1,7 @@
 import Category from '../Model/categoryModel.js';
 import { ApiError } from '../Utils/apiError.js';
 import { ApiResponse } from '../Utils/apiResponse.js';
-import asynchandler from '../utils/asynchandler.js';
+import asynchandler from '../Utils/asyncHandler.js';
 
 // Create a category
 export const createCategory = asynchandler(async (req, res) => {
