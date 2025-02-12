@@ -24,9 +24,28 @@ const courseSchema = new mongoose.Schema(
       type: String,
       required: false,
     },
-    
-    videos: {
-      type: [String], // Array of strings (URLs)
+    videos: [
+      {
+        url: {
+          type: String,
+          required: true,
+        },
+        title: {
+          type: String,
+          required: true,
+        },
+        thumbnail: {
+          type: String,
+          required: false,
+        },
+        pdf: {
+          type: String,
+          required: false,
+        },
+      },
+    ],
+    demoVideo: {
+      type: String, // URL of the demo video
       required: false,
     },
     duration: {
