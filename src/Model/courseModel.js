@@ -1,72 +1,33 @@
 import mongoose from "mongoose";
 
-const courseSchema = new mongoose.Schema(
-  {
-    name: {
-      type: String,
-      required: true,
-    },
-    price: {
-      actualPrice: {
-        type: Number,
-        required: true,
-      },
-      discountPrice: {
-        type: Number,
-        required: false,
-      },
-    },
-    description: {
-      type: String,
-      required: true,
-    },
-    pdf: {
-      type: String,
-      required: false,
-    },
-    videos: [
-      {
-        url: {
-          type: String,
-          required: true,
-        },
-        title: {
-          type: String,
-          required: true,
-        },
-        thumbnail: {
-          type: String,
-          required: false,
-        },
-        pdf: {
-          type: String,
-          required: false,
-        },
-      },
-    ],
-    demoVideo: {
-      type: String, // URL of the demo video
-      required: false,
-    },
-    duration: {
-      type: String,
-      required: false,
-    },
-    thumbnail: {
-      type: String,
-      required: false,
-    },
-    language: {
-      type: String,
-      required: false,
-    },
-    category: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Category",
-    },
+const courseSchema = new mongoose.Schema({
+  title: { type: String, required: true },
+  dec: { type: String, required: true },
+  price: { type: Number, required: true },
+  duration: { type: String, required: true },
+  lang: { type: String, required: true },
+  category: { type: mongoose.Schema.Types.ObjectId, ref: "Category", required: true },
+  introVideo: {
+    thub: { type: String, required: true },
+    video: { type: String, required: true }
   },
-  { timestamps: true }
-);
+  chapters: [
+    {
+      title: { type: String, required: true },
+      dec: { type: String, required: true },
+      pdf: { type: String, required: false },
+      videos: [
+        {
+          video: { type: String, required: true },
+          title: { type: String, required: true },
+          thub: { type: String, required: false },
+          duration: { type: String, required: false }
+        }
+      ]
+    }
+  ]
+});
 
 const Course = mongoose.model("Course", courseSchema);
 export default Course;
+ 

@@ -1,10 +1,11 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
 const categorySchema = new mongoose.Schema(
   {
     name: {
       type: String,
       required: true,
+      unique: true, // Ensures unique category names
     },
     description: {
       type: String,
@@ -12,10 +13,9 @@ const categorySchema = new mongoose.Schema(
     },
   },
   {
-    timestamps: true, 
+    timestamps: true,
   }
 );
 
-const Category = mongoose.model('Category', categorySchema);
-
+const Category = mongoose.model("Category", categorySchema);
 export default Category;
