@@ -1,7 +1,7 @@
 import Blog from "../Model/blogModel.js";
 import { ApiError } from "../Utils/apiError.js";
 import { ApiResponse } from "../Utils/apiResponse.js";
-import asynchandler from "../Utils/asynchandler.js";
+import asynchandler from "../Utils/asyncHandler.js";
 import uploadOnCloudinary from "../Utils/cloudinary.js";
 
 // Create a new blog
